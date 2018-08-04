@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Mireia&David</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('img/cadaques2_osc.jpg') ;
+	 opacity: 0.8;
+	
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url('img/juntos.jpg');
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url('img/cadaques.jpg');
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+body{
+	text-align: center;
+  
+}
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+/* latin */
+@font-face {
+  font-family: 'Clicker Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Clicker Script'), local('ClickerScript-Regular'), url(https://fonts.gstatic.com/s/clickerscript/v5/raxkHiKPvt8CMH6ZWP8PdlEq71rf0Ts.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	margin:20px;
+	border-radius: 3px;
+	background: #f2a2d2;
+	display: inline-block;
+	color: #3a3036;
+}
+
+#clockdiv div > span{
+	padding: 10px;
+	border-radius: 3px;
+	background: #dbbace;
+	display: inline-block;
+	color: #3a3036;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+	color: #3a3036;
+}
+
+@media only screen and (max-width: 768px)
+.title-front {
+    font-size: 22px;
+}
+@media only screen and (max-height: 650px)
+.title-front {
+    font-size: 22px;
+}
+@media only screen and (max-height: 750px)
+.title-front {
+    font-size: 24px;
+}
+.title-front {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700;
+}
+* {
+    outline: none;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+.text-center {
+    text-align: center;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.all-title {
+    font-family: "Clicker Script";
+    color: #fff;
+    font-size: 120px;
+    padding-top: 0px;
+    display: block;
+}
+
+.title-date {
+    font-family: "Clicker Script";
+    color: #fff;
+    font-size: 50px;
+    padding-top: 0px;
+    display: block;
+}
+.title-under {
+    color: #fff;
+}
+@media only screen and (max-height: 650px)
+.title-under {
+    padding-top: 12px;
+    font-size: 20px;
+}
+@media only screen and (max-height: 750px)
+.title-under {
+    font-size: 22px;
+}
+.title-under {
+    font-weight: 800;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 20px 0 0 0;
+}
+* {
+    outline: none;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Información</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Fotos</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Contacto</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container "  id="home">
+	<div class="w3-display-middle" style="white-space:nowrap;">
+		<!--<div class="title-front" style=""><span class="char1" style="display: inline-block; transition: none; transform: translateX(-1px) translateY(37px) rotate(-31deg);">W</span><span class="char2" style="display: inline-block; transition: none; transform: translateX(-2px) translateY(27px) rotate(-27deg);">e</span><span class="char3 empty" style="display: inline-block; transition: none; transform: translateX(-2px) translateY(24px) rotate(-25deg);">&nbsp;</span><span class="char4" style="display: inline-block; transition: none; transform: translateX(-3px) translateY(19px) rotate(-22deg);">a</span><span class="char5" style="display: inline-block; transition: none; transform: translateX(-3px) translateY(13px) rotate(-19deg);">r</span><span class="char6" style="display: inline-block; transition: none; transform: translateX(-3px) translateY(9px) rotate(-16deg);">e</span><span class="char7 empty" style="display: inline-block; transition: none; transform: translateX(-2px) translateY(7px) rotate(-14deg);">&nbsp;</span><span class="char8" style="display: inline-block; transition: none; transform: translateX(-2px) translateY(5px) rotate(-11deg);">g</span><span class="char9" style="display: inline-block; transition: none; transform: translateX(-1px) translateY(2px) rotate(-7deg);">e</span><span class="char10" style="display: inline-block; transition: none; transform: translateX(-1px) translateY(1px) rotate(-4deg);">t</span><span class="char11" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(-1deg);">t</span><span class="char12" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(0deg);">i</span><span class="char13" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(3deg);">n</span><span class="char14" style="display: inline-block; transition: none; transform: translateX(1px) translateY(2px) rotate(7deg);">g</span><span class="char15 empty" style="display: inline-block; transition: none; transform: translateX(2px) translateY(3px) rotate(9deg);">&nbsp;</span><span class="char16" style="display: inline-block; transition: none; transform: translateX(2px) translateY(6px) rotate(12deg);">m</span><span class="char17" style="display: inline-block; transition: none; transform: translateX(3px) translateY(11px) rotate(17deg);">a</span><span class="char18" style="display: inline-block; transition: none; transform: translateX(3px) translateY(16px) rotate(20deg);">r</span><span class="char19" style="display: inline-block; transition: none; transform: translateX(3px) translateY(22px) rotate(24deg);">r</span><span class="char20" style="display: inline-block; transition: none; transform: translateX(2px) translateY(26px) rotate(26deg);">i</span><span class="char21" style="display: inline-block; transition: none; transform: translateX(2px) translateY(31px) rotate(28deg);">e</span><span class="char22" style="display: inline-block; transition: none; transform: translateX(0px) translateY(39px) rotate(32deg);">d</span></div>-->
+		
+		<div class="logo title-front">			
+			<img src="img/logo.png" alt="">
+		</div>  
+		<div class="all-title">
+			Mireia <span>&amp;</span> David
+		</div>
+		<!--<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Mireia <span class="w3-hide-small">&</span> David</span>-->
+		<div class="title-date">
+			<span class="swirl-left"><span class="swirl-right">08<span>.</span>06<span>.</span>2019</span></span>
+		</div>
+		<div class="title-under" style="">
+			<span class="char1" style="display: inline-block; transition: none; transform: translateX(0px) translateY(-13px) rotate(22deg);">&#9825;</span>
+			<span class="char2" style="display: inline-block; transition: none; transform: translateX(0px) translateY(-8px) rotate(18deg);">N</span>
+			<span class="char3" style="display: inline-block; transition: none; transform: translateX(0px) translateY(-4px) rotate(13deg);">o</span>
+			<span class="char4" style="display: inline-block; transition: none; transform: translateX(0px) translateY(-2px) rotate(9deg);">s</span>
+			<span class="char5 empty" style="display: inline-block; transition: none; transform: translateX(0px) translateY(-1px) rotate(6deg);">&nbsp;</span>
+			<span class="char6" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(4deg);">c</span>
+			<span class="char7" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(0deg);">a</span>
+			<span class="char8" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(-4deg);">s</span>
+			<span class="char9" style="display: inline-block; transition: none; transform: translateX(0px) translateY(-1px) rotate(-6deg);">a</span>
+			<span class="char10" style="display: inline-block; transition: none; transform: translateX(0px) translateY(-2px) rotate(-9deg);">m</span>
+			<span class="char11" style="display: inline-block; transition: none; transform: translateX(0px) translateY(-5px) rotate(-14deg);">o</span>
+			<span class="char12" style="display: inline-block; transition: none; transform: translateX(0px) translateY(-9px) rotate(-18deg);">s</span>
+			<span class="char13" style="display: inline-block; transition: none; transform: translateX(0px) translateY(-13px) rotate(-22deg);">&#9825;</span>
+		</div>
+  </div>
+</div>
+
+
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">¡Nos casamos!</h3>
+  <p class="w3-center"><em>8 de Junio 2019</em></p>
+  <p>Quién nos iba a decir que la locura, la casualidad y el destino nos iba llevar a la celebración del día más especial de nuestras vidas.
+    Porque esto no es cualquier historia de chico conoce a chica, esta es nuestra historia...Chico hace match en Tinder con chica!!
+    Y tú que estás leyendo esto, sí tú, eres también parte de nuestra historia y por eso queremos que compartas con nosotros la celebración de nuestra unión.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa w3-margin-right"></i>Un anochecer en Zadar, Croacia, ella dijo sí</b></p><br>
+      <img src='img/anilloZadar.jpg' class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="David&Mireia" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+  <p class="w3-large w3-center w3-padding-16">¿Dónde?</p>
+  <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div>
+</div>
+
+
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class=" w3-xxlarge w3-text-white w3-wide">ESTÁS INVITADO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">FOTOS</h3>
+  <p class="w3-center"><em>Aquí podéis ver algunas fotos nuestras.<br> Haz click en una foto para ampliarla</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="img/barcoTai.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="foto">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img/bodaRaquel.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="foto">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img/bodaSaman.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="foto">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img/bodaSuyBernat.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="foto">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="img/cadaques.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="foto">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img/Paris.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="foto">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img/camprodon.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="foto">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img/saelices.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="foto">
+    </div>
+    
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+<h1>Cuenta atrás</h1>
+<div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACTO</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">Confirma tu asistencia</h3>
+  <p class="w3-center"><em>Esperamos tu respuesta</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Teléfonos: 615434923 / 686082178<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mire2612@gmail.com<br>
+      </div>
+      
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(41.878114, -87.629798);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var dateStr = "08/06/2019 19:00";
+var date = dateStr.split(/\s|\/|:/);
+var d = new Date(date[2], date[1], date[0], date[3], date[4]);
+
+
+initializeClock('clockdiv', d);
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
